@@ -1,0 +1,256 @@
+body {
+  background-color: rgb(244, 244, 244);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background-color: white;
+}
+
+nav h2 {
+  color: purple;
+  font-size: 32px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s , transform 0.3s;
+  display: inline-block;
+}
+
+nav ul li a:hover {
+  color: purple;
+  transform: translateY(-3px);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 60px;
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 350px;
+  border-radius: 50%;
+}
+
+#about {
+  padding: 80px 20px;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  border-top: 1px solid rgb(221, 221, 221);
+}
+
+#about h2 {
+  color: purple;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#about p {
+  max-width: 600px;
+  margin: 10px auto;
+  line-height: 1.8;
+  font-size: 18px;
+  color: rgb(70, 70, 70);
+}
+
+#skills {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#skills h2 {
+  color: purple;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.skill {
+  background-color: white;
+  padding: 20px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+#projects {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#projects h2 {
+  color: purple;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.project {
+  background-color: white;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+}
+
+.project h3 {
+  color: purple;
+}
+
+.project-button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.project-button:hover {
+  background-color: #6a0dad;
+}
+
+#contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact h2 {
+  color: purple;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+#contact form {
+  max-width: 500px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#contact textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+#contact button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+#contact button:hover {
+  background-color: rgb(100, 0, 150);
+}
+
+footer {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav ul {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-image img {
+    width: 200px;
+  }
+
+  .skills-container,
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .skill {
+    width: 90%;
+  }
+
+  .project {
+    width: 90%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 90%;
+  }
+  
+}
