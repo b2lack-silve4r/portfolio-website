@@ -1,26 +1,22 @@
-const contactForm = 
-document .getElementById("contact-form");
+const contactForm = document .getElementById("contact-form");
 
-const nameInput = 
-document .getElementById("name");
+contactForm .addEventListener("submit", function (event) {
+  event .preventDefault();
 
-const emailInput =
-document .getElementById("email");
+  const name = document .getElementById ("name") . value;
+  const email = document .getElementById ("email") . value;
+  const message = document .getElementById ("message") . value;
 
-contactForm .addEventListener ("submit" , function (event) {
-  event .preventDefault ();
+  const whatsappMessage =
+      `Hello Christian,\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n\n` +
+      `Message: \n${message}`;
 
-  const name = nameInput.value;
+  const whatsappURL =
+      `https://wa.me/2347048492926?text=${encodeURIComponent(whatsappMessage)}`;
+  
+  window.open(whatsappURL, "_blank");
 
-  const email = emailInput.value;
-
-  if (!emailInput .checkValidity ())
-  {
-    alert ("Please enter a valid email address.");
-    return;
-  }
-
-  alert (`Thank you, ${name}! Your message has been received.`);
-
-  contactForm .reset ();
-});
+  contactForm.reset();
+})
